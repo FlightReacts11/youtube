@@ -1,0 +1,343 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --big-addition: hsl(110, 100%, 40%) ;
+  --moderate-addition: hsl(110, 70%, 74%);
+  --neutral: hsl(0, 0%, 100%);
+  --moderate-loss: hsl(0, 100%, 81%);
+  --big-loss: hsl(4, 100%, 53%);
+  --tbd: hsl(298, 93%, 54%);
+  --rookie: hsl(194, 98%, 50%);
+
+
+  --superstar: hsl(286, 98%, 50%);
+  --franchise-player: hsl(241, 100%, 65%);
+  --all-star: hsl(180, 98%, 50%);
+  --quality-starter: hsl(113, 100%, 41%);
+  --starting-calibre: hsl(88, 100%, 50%);
+  --rotational-player: hsl(66, 100%, 50%);
+  --deep-rotation: hsl(27, 98%, 50%);
+  --EOB: hsl(0, 100%, 48%);
+}
+
+body {
+  background-color: black;
+}
+
+ul {
+  list-style-type: none;
+  font-size: 16px
+}
+
+
+/* Offseason Changes */
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+h1, h2 {
+  color: white;
+}
+
+.title {
+  margin-left: 2px;
+  margin-bottom: 10px;
+}
+
+.offseason-header {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.offseason-container {
+  border: solid white 1px;
+  margin: 20px 20% 0px 20%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+  border-radius: 4px;
+  flex-direction: column;
+}
+
+.offseason-container-contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-side {
+  list-style-position: inside;
+  margin-left: 6px;
+}
+
+.losses h2 {
+  margin-left: 5px
+}
+
+.additions h2 {
+  margin-right: 40px;
+}
+
+.left-side li::before {
+  content: "• ";
+  font-size: 20px;
+  position: relative;
+  top: 1.5px
+}
+
+.right-side li::before {
+  content: "• ";
+  font-size: 20px;
+  position: relative;
+  top: 1.5px
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: hsla(0, 0%, 0%);
+  padding: 4px 0;
+  border: solid white 1px;
+  
+}
+
+.footer-ul {
+  display: flex;
+  gap: 40px;
+  font-size: 20px;
+  list-style-type: disc;
+}
+
+.footer-ul li {
+  font-weight: 550
+}
+
+.footer-ul li:nth-child(1) {
+  color: var(--big-addition)
+}
+
+.footer-ul li:nth-child(2) {
+  color: var(--moderate-addition)
+}
+
+.footer-ul li:nth-child(3) {
+  color: var(--neutral)
+}
+
+.footer-ul li:nth-child(4) {
+  color: var(--moderate-loss)
+}
+
+.footer-ul li:nth-child(5) {
+  color: var(--big-loss)
+}
+
+.footer-ul li:nth-child(6) {
+  color: var(--tbd)
+}
+
+.footer-ul li:nth-child(7) {
+  color: var(--rookie)
+}
+
+
+/* Front Office */
+
+
+
+
+
+
+/* Starting Five */
+
+.top-image {
+  width: 100%;
+  height: 85%;
+}
+
+.top-card {
+  height: 40vh;
+  width: 20vw; 
+  border: solid white 3px;
+  position: relative;
+
+}
+
+.starting-five {
+  margin-bottom: 40px;
+}
+
+.bottom-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 13%;
+}
+
+.player-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 5px;
+}
+
+.first-name {
+  color: white;
+  font-size: 14px;
+  position: relative;
+  top: 1px;
+}
+
+.last-name {
+  color: white;
+  font-size: 19px;
+  font-weight: 600;
+  position: relative;
+  bottom: 1px;
+}
+
+.position {
+  color: white;
+  display: flex;
+  margin-left: auto;
+  margin-bottom: 2px;
+  margin-right: 1px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.top-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  grid-column: 1 / -1;
+  margin-bottom: 20px;
+}
+
+.rating {
+  color: white;
+}
+
+
+.bottom-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  grid-column: 1 / -1;
+}
+
+.card-icons {
+  position: absolute;
+  bottom: 14%;
+  left: 0;
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  background-color: hsla(0, 0%, 0%, 0.5)
+}
+
+.card-icon {
+  width: 50px;
+  height: auto;
+}
+
+.rating-and-overall {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin-bottom: 3px;
+}
+
+.rating, .overall {
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  
+  padding: 0.5px 3px;
+}
+
+.overall {
+  font-size: 14px;
+}
+
+.table-container {
+  display: flex;
+  gap: 15px;
+  position: relative;
+  bottom: 150px;
+  border: 2px solid white;
+  width: 200px;
+  padding: 3px;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.cell {
+  white-space: pre-line;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  line-height: 17px;
+  font-size: 18px;
+  border-left: 4px solid;
+  padding-left: 3px;
+  border-bottom: 1px solid rgba(253, 252, 252, 0.3);
+  border-right: 1px solid rgba(253, 252, 252, 0.3);
+}
+
+
+
+.left-column .cell:nth-child(1) {
+  color: var(--superstar)
+}
+
+.left-column .cell:nth-child(2) {
+  color: var(--franchise-player)
+}
+
+.left-column .cell:nth-child(3) {
+  color: var(--all-star)
+}
+
+.left-column .cell:nth-child(4) {
+  color: var(--quality-starter);
+}
+
+
+.right-column .cell:nth-child(1) {
+  color: var(--starting-calibre);
+}
+
+.right-column .cell:nth-child(2) {
+  color: var(--rotational-player);
+}
+
+.right-column .cell:nth-child(3) {
+  color: var(--deep-rotation);
+}
+
+.right-column .cell:nth-child(4) {
+  color: var(--EOB);
+}
