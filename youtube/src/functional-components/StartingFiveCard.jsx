@@ -1,10 +1,11 @@
 import "../index.css";
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import Paolo from "../assets/paolo.jpg"
+import Paolo from "../assets/paolo.jpg";
 
 
 function StartingFiveCard({color, rating, position, image, icon = [], firstname, lastname}) {
+
     return (
         <div className="starting-wrapper">
 

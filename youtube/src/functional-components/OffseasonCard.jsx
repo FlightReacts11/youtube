@@ -1,7 +1,7 @@
 import "../index.css";
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import Offseason from "./Offseason";
+import Offseason from "../components/Offseason";
 
 
 
@@ -9,7 +9,7 @@ function OffseasonCard({additions, losses, title, color, name}) {
     return (
         <div className="total-wrapper">
         <div>
-            <h1>Offseason Changes</h1>
+            
         <div className="offseason-container">
     <h2 className="title">{title}</h2>
     <div className="offseason-container-contents">
@@ -17,7 +17,7 @@ function OffseasonCard({additions, losses, title, color, name}) {
             <h2>Losses:</h2>
             <ul className="left-side">
                 {losses.map((loss, index) => (
-                    <li key={index} style={{color: loss.color}}>{loss.name}</li>
+                    <li className="list-item" key={index} style={{color: loss.color}}>{loss.name}</li>
                 ))}
             </ul>
         </div>
@@ -26,7 +26,7 @@ function OffseasonCard({additions, losses, title, color, name}) {
             <h2>Additions:</h2>
             <ul className="right-side">
                 {additions.map((addition, index) => (
-                    <li key={index} style={{color: addition.color}}>{addition.name}</li>
+                    <li className="list-item" key={index} style={{color: addition.color}}>{addition.name}</li>
                 ))}
             </ul>
         </div>

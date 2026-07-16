@@ -25,7 +25,41 @@
 }
 
 body {
-  background-color: black;
+  background-image: url('/src/assets/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.video-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 ul {
@@ -46,23 +80,37 @@ h1, h2 {
 }
 
 .title {
-  margin-left: 2px;
-  margin-bottom: 10px;
+  padding-left: 8px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  border-bottom: 1px solid rgba(97, 88, 88, 0.548);
+  padding-bottom: 5px;
 }
 
-.offseason-header {
+.offseason-header-container h1 {
+  margin: 0;
+}
+
+.offseason-header-container {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 10px;
+  background-color: hsla(0, 0%, 0%, 0.8);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 12px;
+  border-radius: 2px;
 }
 
 .offseason-container {
   border: solid white 1px;
-  margin: 20px 20% 0px 20%;
+  margin: 40px 20% 0px 20%;
   display: flex;
   justify-content: space-between;
   padding: 3px;
   border-radius: 4px;
   flex-direction: column;
+  background-color: hsla(0, 0%, 0%, 0.8);
 }
 
 .offseason-container-contents {
@@ -76,12 +124,18 @@ h1, h2 {
 }
 
 .losses h2 {
-  margin-left: 5px
+  margin-left: 6px
 }
 
 .additions h2 {
   margin-right: 40px;
 }
+
+.list-item {
+  margin-top: 6px;
+  font-size: 18px;
+}
+
 
 .left-side li::before {
   content: "• ";
@@ -152,16 +206,132 @@ h1, h2 {
 
 /* Front Office */
 
+.front-office-header {
+  background-color: black;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  top: 25px;
+  border-radius: 4px;
+  font-size: 18px;
+}
 
 
+.front-office {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 850px;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+}
+
+.front-office-top {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  flex-shrink: 0;
+}
+
+.front-office-person {
+  position: relative;
+  flex: 1;
+}
+
+.owner-side {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.front-office-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 400px;
+}
+
+.front-office-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 8px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.front-office-label {
+  color: #aaa;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 2px;
+  font-weight: bold;
+}
+
+.front-office-name {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.front-office-bottom {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px 28px;
+}
+
+.front-office-grade {
+  position: relative;
+  left: 50px;
+  bottom: 7px;
+}
+
+.front-office-pill {
+  padding: 14px 0;
+  border-bottom: 0.5px solid rgba(218, 218, 218, 0.267);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.front-office-pill:last-child {
+  border-bottom: none;
+}
+
+.front-office-stat-label {
+  color: #919191;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.front-office-stat-value {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  width: 100%;
+}
 
 
+/* Starting Five Cards / Bench Cards*/ 
 
-/* Starting Five */
+
 
 .top-image {
   width: 100%;
-  height: 85%;
+  height: 84%;
 }
 
 .top-card {
@@ -173,14 +343,41 @@ h1, h2 {
 }
 
 .starting-five {
-  margin-bottom: 40px;
+  margin-bottom: 0;
+  background-color: black;
+  padding: 10px;
+  width: fit-content;
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 3%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.starting-five-note {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+  position: relative;
+  bottom: 3px;
+  margin-left: 2px;
+}
+
+.starting-five-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
 }
 
 .bottom-card {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  height: 13%;
+  height: 16%;
+  background-color: black;
+  position: relative;
+  bottom: 3px;
 }
 
 .player-name {
@@ -202,7 +399,11 @@ h1, h2 {
   font-size: 19px;
   font-weight: 600;
   position: relative;
-  bottom: 1px;
+}
+
+.first-name, .last-name {
+  position: relative;
+  top: 1px;
 }
 
 .position {
@@ -251,28 +452,36 @@ h1, h2 {
 
 .card-icon {
   width: 50px;
-  height: auto;
+  object-fit: contain;
 }
 
 .rating-and-overall {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
   margin-bottom: 3px;
+  border: 2px solid black;
+  height: 100%;
 }
 
 .rating, .overall {
   color: white;
+  text-shadow: 
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
   display: flex;
   justify-content: center;
   position: relative;
-  
-  padding: 0.5px 3px;
+  padding: 1px 3px;
+  font-weight: 600px;
 }
 
 .overall {
   font-size: 14px;
 }
+
+/* Player Tier Container */
 
 .table-container {
   display: flex;
@@ -283,6 +492,7 @@ h1, h2 {
   border: 2px solid white;
   width: 200px;
   padding: 3px;
+  background-color: black;
 }
 
 .left-column {
@@ -306,6 +516,7 @@ h1, h2 {
   padding-left: 3px;
   border-bottom: 1px solid rgba(253, 252, 252, 0.3);
   border-right: 1px solid rgba(253, 252, 252, 0.3);
+  
 }
 
 
@@ -341,4 +552,411 @@ h1, h2 {
 
 .right-column .cell:nth-child(4) {
   color: var(--EOB);
+}
+
+
+
+
+/* Strengths and Weaknesses */
+
+.summary-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background: #0d0d0d;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 700px;
+  z-index: 10;
+  border-color: rgba(255, 255, 255, 0.596);
+}
+
+.summary-left {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.summary-left .top-card {
+  flex: 1;
+}
+
+.summary-left .top-image {
+  flex: 1;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.summary-right {
+  flex: 1;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-content: start;
+  margin-left: 10px;
+}
+
+.summary-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.summary-section-bar {
+  width: 4px;
+  height: 16px;
+
+}
+
+.strengths-bar {
+  background: #4CAF50;
+}
+
+.weaknesses-bar {
+  background: #F44336;
+}
+
+.summary-section-label {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.summary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(231, 230, 230, 0.178);
+  font-size: 14px;
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.summary-bullet {
+  flex-shrink: 0;
+}
+
+.summary-text {
+  color: #eee;
+  font-size: 20px;
+}
+
+
+
+/*Bench*/
+
+.depth-title {
+  position: relative;
+  bottom: 7px;
+}
+
+.bench-wrapper {
+  position: relative;
+  bottom: 40px;
+}
+
+.bench-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.bench-table-container {
+  position: relative;
+  top: 100px;
+  left: 40px;
+}
+
+.rest-of-bench-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 101px;
+  left: 250px;
+  height: 100%;
+  flex-direction: column;
+}
+
+.rest-of-bench {
+  background-color: black;
+  width: 620px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bench-cell {
+  border: 1px solid rgba(253, 252, 252, 0.3);
+  width: 310px;
+  height: 43px;
+  align-items: center;
+  display: flex;
+  gap: 7px;
+  font-size: 18px;
+}
+
+.bench-rating-overall {
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+  align-items: center;
+  color: white;
+  text-shadow: 
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+  font-size: 16px;
+  border-right: 2px solid rgba(253, 252, 252, 0.3);
+  font-weight: 600;
+}
+
+.bench-name {
+  color: white;
+}
+
+.bench-icons {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.bench-icon {
+  height: 100%;
+  width: auto;
+  max-width: 30px;
+  display: block;
+}
+
+
+/* Team Summary */
+
+.summary-outer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.final-graphic-container {
+  align-items: center;
+  background-color: black;
+  border: 2px solid white;
+  padding: 20px;
+  display: flex;
+  z-index: 10;
+  width: 100%;
+  border-radius: 15px;
+  justify-content: center;
+  
+}
+
+.keys {
+  vertical-align: middle;
+  width: 60px;
+  height: 44px;
+}
+
+.money {
+  vertical-align: middle;
+  height: 43px;
+  width: 50px;
+}
+
+.key-list {
+  list-style-type: none;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.key-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 12px 16px;
+  border-left: 4px solid white;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  height: 74px;
+}
+
+.asset-value {
+ height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.key-card:nth-child(1) {
+  border-color: rgba(255, 255, 255, 0);
+}
+
+.key-card:nth-child(2) {
+  border-color:  rgba(255, 255, 255, 0);
+}
+
+.key-card:nth-child(3) {
+  border-color:  rgba(255, 255, 255, 0);
+}
+
+
+.assets-box .asset-card:nth-child(1) {
+  border-color: rgb(14, 100, 14);
+}
+
+.assets-box .asset-card:nth-child(2) {
+  border-color: rgb(31, 158, 243);
+}
+
+.assets-box .asset-card:nth-child(3) {
+  border-color: rgb(250, 2, 126);
+}
+
+
+
+  .keys-to-success {
+    margin-bottom: 20px;
+  }
+
+  .assets {
+    margin-bottom: 20px;
+  }
+
+.keys-to-success, .assets{
+  font-size: 30px;
+  text-decoration: underline;
+  text-align: center;
+}
+                
+.team-overall {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.keys-box,
+.assets-box {
+  background: #111;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+
+.assets-list {
+  list-style-type: none;
+  color: white;
+  font-size: 24px;
+}
+
+  .assets-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.asset-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 12px 16px;
+  border-left: 4px solid white;
+}
+
+.asset-card:nth-child(1) {
+  border-color: rgb(0, 231, 0);
+}
+
+.asset-card:nth-child(2) {
+  border-color: rgb(31, 158, 243);
+}
+
+.asset-card:nth-child(3) {
+  border-color: rgb(250, 2, 126);
+}
+
+.asset-value {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.asset-label {
+  color: #888;
+  font-size: 13px;
+  margin: 2px 0 0;
+}
+
+.final-grade {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.final-grade-bar {
+  display: flex;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 500px;
+  backdrop-filter: blur(6px);
+}
+
+.final-grade-card {
+  flex: 1;
+  padding: 24px 32px;
+  text-align: center;
+}
+
+.final-grade-card:first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.final-grade-label {
+  color: #a3a3a3;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+  
+}
+
+.final-grade-value {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1;
+}
+
+.grade-color {
+  color: var(--quality-starter);
+}
+
+.wins-color {
+  color: #378ADD;
 }
