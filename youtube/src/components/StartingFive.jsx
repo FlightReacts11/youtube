@@ -3,6 +3,17 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import StartingFiveCard from "../functional-components/StartingFiveCard";
 import Paolo from "../assets/paolo.jpg";
+
+
+
+
+import Suggs from "../assets/suggs.webp";
+import Bane from "../assets/bane.webp";
+import Wagner from "../assets/wagner.webp";
+import Jackson from "../assets/jackson.jpg";
+import Carter from "../assets/carter.jpg";
+
+
 import UpArrow from "../icons/up-arrow.png";
 import DownArrow from "../icons/down-arrow.png";
 import DoubleArrow from "../icons/up-and-down-arrow.png";
@@ -21,53 +32,53 @@ function StartingFive() {
             <div className="card-grid">
                 <div className="top-row">
             <StartingFiveCard 
-            rating={90}
-            color="var(--superstar)"
-            firstname="Paolo"
-            lastname="Banchero"
-            position="PF"
-            image={Paolo}
-            icon={[UpArrow, DownArrow, Clock]}/>
+            rating={79}
+            color="var(--quality-starter)"
+            firstname="Jalen"
+            lastname="Suggs"
+            position="PG"
+            image={Suggs}
+            icon={[Cross]}/>
 
             <StartingFiveCard 
-            rating={85}
-            color="var(--franchise-player)"
+            rating={83}
+            color="var(--all-star)"
             firstname="Desmond"
             lastname="Bane"
             position="SG"
-            image={Paolo}
-            icon={[Flame, UpArrow, Eyes]}/>
+            image={Bane}
+            icon={[]}/>
 
             <StartingFiveCard 
-            rating={90}
-            color="var(--superstar)"
-            firstname="Paolo"
-            lastname="Banchero"
-            position="PF"
-            image={Paolo}
-            icon={[DoubleArrow, DownArrow, Cross]}/>
+            rating={85}
+            color="var(--all-star)"
+            firstname="Franz"
+            lastname="Wagner"
+            position="SF/PF"
+            image={Wagner}
+            icon={[]}/>
 
             </div>
 
             <div className="bottom-row">
 
             <StartingFiveCard 
-            rating={90}
-            color="var(--superstar)"
+            rating={89}
+            color="var(--franchise-player)"
             firstname="Paolo"
             lastname="Banchero"
             position="PF"
             image={Paolo}
-            icon={[UpArrow, DownArrow]}/>
+            icon={[Eyes]}/>
 
             <StartingFiveCard 
-            rating={90}
-            color="var(--superstar)"
-            firstname="Paolo"
-            lastname="Banchero"
-            position="PF"
-            image={Paolo}
-            icon={[UpArrow, DownArrow]}/>
+            rating={75}
+            color="var(--starting-calibre)"
+            firstname="Wendell"
+            lastname="Carter Jr"
+            position="C"
+            image={Carter}
+            icon={[]}/>
 
             </div>
             </div>

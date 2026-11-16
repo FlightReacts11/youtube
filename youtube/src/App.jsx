@@ -20,15 +20,19 @@ function App() {
         loop
         muted
       />
+
+
+
+      {/*Uncomment These Components Below Piece by Piece To See The Graphics}*/}
       
       </div>
 
-        <Offseason />
-       {/* <FrontOffice /> */}
-      {/* <StartingFive /> */}
+        {/*<Offseason />*/}
+        {/*<FrontOffice />*/}
+      {/*<StartingFive />*/}
       {/* <PlayerSummary /> */ }
-      {/* <Bench /> */}
-      {/* <Summary /> */}
+       {/*<Bench /> */}
+       {/*<Summary /> */}
     </div>
   )
 }

@@ -13,9 +13,9 @@ function Summary() {
             <div className="keys-box">
                 <h2 className="keys-to-success">Keys To Success</h2>
                 <ul className="key-list">
-                    <li className="key-card">sss</li>
-                    <li className="key-card">sss</li>
-                    <li className="key-card">sss</li>
+                    <li className="key-card">Sean Sweeney Getting This Squad To Play Great</li>
+                    <li className="key-card">Team Health</li>
+                    <li className="key-card">Anthony Black Taking Another Big Step</li>
                 </ul>
             </div>
 
@@ -23,15 +23,15 @@ function Summary() {
     <h2 className="assets">Team Strengths + Weaknesses</h2>
     <div className="assets-cards">
         <div className="asset-card">
-            <p className="asset-value">$12.4M</p>
+            <p className="asset-value">Size & Defense</p>
             
         </div>
         <div className="asset-card">
-            <p className="asset-value">2</p>
+            <p className="asset-value">Really Good Team In The Playoffs</p>
 
         </div>
         <div className="asset-card">
-            <p className="asset-value">KCP, </p>
+            <p className="asset-value">Shooting</p>
         </div>
     </div>
 </div>
@@ -42,11 +42,11 @@ function Summary() {
     <div className="final-grade-bar">
         <div className="final-grade-card">
             <p className="final-grade-label">Final Grade</p>
-            <p className="final-grade-value grade-color">70</p>
+            <p className="final-grade-value grade-color">78.66</p>
         </div>
         <div className="final-grade-card">
             <p className="final-grade-label">Estimated Win Total</p>
-            <p className="final-grade-value wins-color">45</p>
+            <p className="final-grade-value wins-color">36-50</p>
         </div>
     </div>
 </div>

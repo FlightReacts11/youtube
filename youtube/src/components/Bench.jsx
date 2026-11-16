@@ -3,9 +3,23 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import StartingFiveCard from "../functional-components/StartingFiveCard";
 import Paolo from "../assets/paolo.jpg";
-import UpArrow from "../icons/up-arrow.png"; 
-import DownArrow from "../icons/down-arrow.png"; 
+
+
+import Black from "../assets/black.jpg";
+import Tristan from "../assets/tristan.jpg";
+import Cain from "../assets/cain.jpg";
+import Vooch from "../assets/vooch.webp";
+
+
+
+
+import UpArrow from "../icons/up-arrow.png";
+import DownArrow from "../icons/down-arrow.png";
 import DoubleArrow from "../icons/up-and-down-arrow.png";
+import Eyes from "../icons/eyes.png";
+import Flame from "../icons/flame.png";
+import Clock from "../icons/clock.png";
+import Cross from "../icons/cross.png"
 
 function Bench() {
 
@@ -43,40 +57,42 @@ function Bench() {
 
             <div className="bench-grid">
                 <StartingFiveCard 
-                rating={90}
-                color="var(--superstar)"
-                firstname="Paolo"
-                lastname="Banchero"
-                position="PF"
-                image={Paolo}
-                icon={[UpArrow, DownArrow,]}/>
+                rating={77}
+                color="var(--starting-calibre)"
+                firstname="Anthony"
+                lastname="Black"
+                position="PG/SG"
+                image={Black}
+                icon={[UpArrow]}/>
 
                 <StartingFiveCard 
-                rating={85}
-                color="var(--franchise-player)"
-                firstname="Desmond"
-                lastname="Bane"
-                position="SG"
-                image={Paolo}
-                icon={[UpArrow,]}/>
+                rating={71}
+                color="var(--rotational-player)"
+                firstname="Jamal"
+                lastname="Cain"
+                position="SF"
+                image={Cain}
+                icon={[Eyes]}/>
 
                 <StartingFiveCard 
-                rating={90}
-                color="var(--superstar)"
-                firstname="Paolo"
-                lastname="Banchero"
-                position="PF"
-                image={Paolo}
-                icon={[UpArrow, DownArrow]}/>
+                rating={72}
+                color="var(--rotational-player)"
+                firstname="Tristan"
+                lastname="da Silva"
+                position="SF/PF"
+                image={Tristan}
+                icon={[UpArrow]}/>
 
                 <StartingFiveCard 
-                rating={90}
-                color="var(--superstar)"
-                firstname="Paolo"
-                lastname="Banchero"
-                position="PF"
-                image={Paolo}
-                icon={[UpArrow, DownArrow]}/>
+                rating={75}
+                color="var(--starting-calibre)"
+                firstname="Nikola"
+                lastname="Vucevic"
+                position="C"
+                image={Vooch}
+                icon={[DownArrow]}/>
+
+
 
                 
             </div>
@@ -90,43 +106,43 @@ function Bench() {
     <div className="rest-of-bench">
         <div className="left-column">
             <div className="bench-cell">
-                <div className="bench-rating-overall" style={{ backgroundColor: benchTable(95) }}>
-                    <span className="bench-rating">95</span>
+                <div className="bench-rating-overall" style={{ backgroundColor: benchTable(67) }}>
+                    <span className="bench-rating">67</span>
                     <span className="bench-overall">OVR</span>
                 </div>
-                <span className="bench-name">Victor Wembanyama</span>
+                <span className="bench-name">Jevon Carter (G)</span>
+                <div className="bench-icons">
+                    <img className="bench-icon" src={""} />
+                </div>
+            </div>
+            <div className="bench-cell">
+                <div className="bench-rating-overall" style={{ backgroundColor: benchTable(69) }}>
+                    <span className="bench-rating">69</span>
+                    <span className="bench-overall">OVR</span>
+                </div>
+                <span className="bench-name">Noah Penda (F)</span>
+                <div className="bench-icons">
+                    <img className="bench-icon" src={Eyes} />
+                </div>
+            </div>
+            <div className="bench-cell">
+                <div className="bench-rating-overall" style={{ backgroundColor: benchTable(73) }}>
+                    <span className="bench-rating">73</span>
+                    <span className="bench-overall">OVR</span>
+                </div>
+                <span className="bench-name">Goga Bitadze (C)</span>
+                <div className="bench-icons">
+                    <img className="bench-icon" src={""} />
+                </div>
+            </div>
+            <div className="bench-cell">
+                <div className="bench-rating-overall" style={{ backgroundColor: benchTable(67) }}>
+                    <span className="bench-rating">69</span>
+                    <span className="bench-overall">OVR</span>
+                </div>
+                <span className="bench-name">Jase Richardson (G)</span>
                 <div className="bench-icons">
                     <img className="bench-icon" src={UpArrow} />
-                </div>
-            </div>
-            <div className="bench-cell">
-                <div className="bench-rating-overall" style={{ backgroundColor: benchTable(85) }}>
-                    <span className="bench-rating">85</span>
-                    <span className="bench-overall">OVR</span>
-                </div>
-                <span className="bench-name">Player B</span>
-                <div className="bench-icons">
-                    <img className="bench-icon" src={UpArrow} />
-                </div>
-            </div>
-            <div className="bench-cell">
-                <div className="bench-rating-overall" style={{ backgroundColor: benchTable(78) }}>
-                    <span className="bench-rating">78</span>
-                    <span className="bench-overall">OVR</span>
-                </div>
-                <span className="bench-name">Player C</span>
-                <div className="bench-icons">
-                    <img className="bench-icon" src={DownArrow} />
-                </div>
-            </div>
-            <div className="bench-cell">
-                <div className="bench-rating-overall" style={{ backgroundColor: benchTable(72) }}>
-                    <span className="bench-rating">72</span>
-                    <span className="bench-overall">OVR</span>
-                </div>
-                <span className="bench-name">Player D</span>
-                <div className="bench-icons">
-                    <img className="bench-icon" src={DownArrow} />
                 </div>
             </div>
         </div>
@@ -134,13 +150,33 @@ function Bench() {
         <div className="right-column">
 
             <div className="bench-cell">
-                <div className="bench-rating-overall" style={{ backgroundColor: benchTable(68) }}>
-                    <span className="bench-rating">70</span>
+                <div className="bench-rating-overall" style={{ backgroundColor: benchTable(69) }}>
+                    <span className="bench-rating">67</span>
                     <span className="bench-overall">OVR</span>
                 </div>
-                <span className="bench-name">Player E</span>
+                <span className="bench-name">Izaiyah Nelson (C)</span>
                 <div className="bench-icons">
-                    <img className="bench-icon" src={DownArrow} />
+                    <img className="bench-icon" src={""} />
+                </div>
+            </div>
+            <div className="bench-cell">
+                <div className="bench-rating-overall" style={{ backgroundColor: benchTable(65) }}>
+                    <span className="bench-rating">66</span>
+                    <span className="bench-overall">OVR</span>
+                </div>
+                <span className="bench-name">Alex Morales (G)</span>
+                <div className="bench-icons">
+                    <img className="bench-icon" src={""} />
+                </div>
+            </div>
+            <div className="bench-cell">
+                <div className="bench-rating-overall" style={{ backgroundColor: benchTable(68) }}>
+                    <span className="bench-rating">68</span>
+                    <span className="bench-overall">OVR</span>
+                </div>
+                <span className="bench-name">Johnathan Isaac (C) </span>
+                <div className="bench-icons">
+                    <img className="bench-icon" src={""} />
                 </div>
             </div>
             <div className="bench-cell">
@@ -148,31 +184,10 @@ function Bench() {
                     <span className="bench-rating">65</span>
                     <span className="bench-overall">OVR</span>
                 </div>
-                <span className="bench-name">Player F</span>
+                <span className="bench-name">Colin Castleton (C) </span>
                 <div className="bench-icons">
-                    <img className="bench-icon" src={DownArrow} />
-                </div>
-            </div>
-            <div className="bench-cell">
-                <div className="bench-rating-overall" style={{ backgroundColor: benchTable(90) }}>
-                    <span className="bench-rating">90</span>
-                    <span className="bench-overall">OVR</span>
-                </div>
-                <span className="bench-name">Player G</span>
-                <div className="bench-icons">
-                    <img className="bench-icon" src={UpArrow} />
-                </div>
-            </div>
-            <div className="bench-cell">
-                <div className="bench-rating-overall" style={{ backgroundColor: benchTable(80) }}>
-                    <span className="bench-rating">80</span>
-                    <span className="bench-overall">OVR</span>
-                </div>
-                <span className="bench-name">Player H</span>
-                <div className="bench-icons">
-                    <img className="bench-icon" src={UpArrow} />
-                    <img className="bench-icon" src={UpArrow} />
-                    <img className="bench-icon" src={DoubleArrow} />
+                    <img className="bench-icon" src={""} />
+                   
                 </div>
             </div>
         </div>

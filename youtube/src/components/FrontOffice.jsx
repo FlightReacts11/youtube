@@ -2,7 +2,7 @@ import "../index.css";
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import FrontOfficeFunctional from "../functional-components/FrontOfficeFunctional";
-import OwnerImg from "../assets/owner.jpg";
+import OwnerImg from "../assets/owner.webp";
 import CoachImg from "../assets/coach.jpg";
 
 
@@ -12,14 +12,14 @@ function FrontOffice() {
         
         <FrontOfficeFunctional 
   ownerImage={OwnerImg}
-  ownerName="Owner Name"
+  ownerName="Jeff Weltman"
   coachImage={CoachImg}
-  coachName="Coach Name"
-  scheme="Pace & Space"
-  drafting="Dalton Knecht, Jared Vanderbilt, Myles Turner"
-  spending="Into the tax"
-  development="Poor"
-  assets="Poor"
+  coachName="Sean Sweeney"
+  scheme="Varied Defense & 5 Out Offense / 4 Out 1 In"
+  drafting="Anthony Black (2023 R1 P18), Jalen Suggs (2021 R1 P5), Franz Wagner (2021 R1 P8)"
+  spending="Into The Aprons"
+  development="Good"
+  assets="Bad"
 />
     </div>
     )

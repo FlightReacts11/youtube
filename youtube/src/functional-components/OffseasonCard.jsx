@@ -14,7 +14,7 @@ function OffseasonCard({additions, losses, title, color, name}) {
     <h2 className="title">{title}</h2>
     <div className="offseason-container-contents">
         <div className="losses">
-            <h2>Losses:</h2>
+            <h2 className="font-touchup">Losses:</h2>
             <ul className="left-side">
                 {losses.map((loss, index) => (
                     <li className="list-item" key={index} style={{color: loss.color}}>{loss.name}</li>
@@ -23,7 +23,7 @@ function OffseasonCard({additions, losses, title, color, name}) {
         </div>
         
         <div className="additions">
-            <h2>Additions:</h2>
+            <h2 className="font-touchup">Additions:</h2>
             <ul className="right-side">
                 {additions.map((addition, index) => (
                     <li className="list-item" key={index} style={{color: addition.color}}>{addition.name}</li>

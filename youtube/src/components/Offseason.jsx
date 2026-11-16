@@ -12,26 +12,26 @@ function Offseason() {
         <OffseasonCard 
         title={["Front Office"]}
         losses={[
-            {name: "Coach 1", color: "var(--big-loss)"},
-            {name: "Coach 1", color: "var(--big-loss)"},
+            {name: "Jamahl Mosley", color: "var(--moderate-addition)"},
+           
         ]}
 
         additions={[
-            {"name": "Coach 1", "color": "var(--big-addition)"}, 
-            {"name": "Coach 3", "color": "var(--moderate-addition)"}
+            {"name": "Sean Sweeney", "color": "var(--moderate-addition)"},
+            
         ]}
         />
 
         <OffseasonCard 
-        title={["Front Office"]}
+        title={["Players"]}
         losses={[
-            {name: "Coach 1", color: "var(--big-loss)"},
-            {name: "Coach 1", color: "var(--big-loss)"},
+            {name: "Moritz Wagner", color: "var(--neutral)"},
+            {name: "Jett Howard", color: "var(--neutral)"},
         ]}
 
         additions={[
-            {"name": "Coach 1", "color": "var(--big-addition)"}, 
-            {"name": "Coach 3", "color": "var(--moderate-addition)"}
+            {name: "Nikola Vucevic", color: "var(--neutral)"}, 
+            {name: "Izaiyah Nelson (R2)", color: "var(--rookie)"}, 
         ]}
         />
 

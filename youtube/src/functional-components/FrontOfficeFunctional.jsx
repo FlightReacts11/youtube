@@ -16,8 +16,8 @@ function FrontOfficeFunctional({ownerImage, ownerName, coachName, coachImage, sc
                 <div className="front-office-person owner-side">
                     <img className="front-office-image" src={ownerImage} />
                     <div className="front-office-overlay">
-                        <p className="front-office-label">Owner</p>
-                        <h2 className="front-office-name">{ownerName} <span className="front-office-grade">A+</span></h2>
+                        <p className="front-office-label">GM / "Owner"</p>
+                        <h2 className="front-office-name">{ownerName} <span className="front-office-grade owner">D+</span></h2>
                         
                     </div>
                 </div>
@@ -26,7 +26,7 @@ function FrontOfficeFunctional({ownerImage, ownerName, coachName, coachImage, sc
                     <img className="front-office-image" src={coachImage} />
                     <div className="front-office-overlay">
                         <p className="front-office-label">Head Coach</p>
-                        <h2 className="front-office-name">{coachName} <span className="front-office-grade">A+</span></h2>
+                        <h2 className="front-office-name">{coachName} <span className="front-office-grade">B</span></h2>
                     </div>
                 </div>
             </div>
