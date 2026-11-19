@@ -6,3 +6,5 @@ Showcase of all the graphics below:
 <img width="1917" height="1078" alt="Screenshot 2026-11-19 041549" src="https://github.com/user-attachments/assets/612bc00c-4dde-4ff4-83d7-e350efe3f291" />
 <img width="1917" height="1078" alt="Screenshot 2026-11-19 041608" src="https://github.com/user-attachments/assets/3149a5f2-b63f-4731-97a9-51408dea2420" />
 
+To toggle the graphics on and off go inside of the App.jsx file in the src folder and comment and uncomment the components
+<img width="1917" height="905" alt="Screenshot 2026-11-19 042128" src="https://github.com/user-attachments/assets/535011e7-2dc1-4743-860b-baddbc56bf84" />
